@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Thermometer from 'react-thermometer-component'
+import { Link } from "react-router-dom";
 import axios from "axios"; 
 
 function Temperature() {
@@ -38,6 +39,7 @@ function Temperature() {
           size="large"
           height="300"
         /><h3>sentiment</h3>
+        
         <Thermometer
           theme="dark"
           value={fakiness}
@@ -46,7 +48,10 @@ function Temperature() {
           format="%"
           size="large"
           height="300"
+          
+          
         /><h3>fakiness</h3>
+        
         <Thermometer
           theme="dark"
           value={authenticity}
@@ -55,7 +60,7 @@ function Temperature() {
           format="%"
           size="large"
           height="300"
-        /><h3>authenticity</h3>
+        /><h3>authenticity</h3> 
     </div>
   );
 }
