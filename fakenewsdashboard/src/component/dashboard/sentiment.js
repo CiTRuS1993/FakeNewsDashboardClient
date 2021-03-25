@@ -90,9 +90,13 @@ function Sentiment(){
         axios
           .get("/getSentiment")
           .then((res) => {
-            setTopics(res.data.topics)
-            setClaims(res.data.claims)
-            setTrends(res.data.trends)
+            let topics = res.data.topics.map((sent)=> {return {y: sent.sentiment, label: sent.date}})
+            let claims = res.data.claims.map((sent)=> {return {y: sent.sentiment, label: sent.date}})
+            let trends = res.data.trends.map((sent)=> {return {y: sent.sentiment, label: sent.date}})
+
+            setTopics(topics)
+            setClaims(claims)
+            setTrends(trends)
         
           })
           .catch(() => {

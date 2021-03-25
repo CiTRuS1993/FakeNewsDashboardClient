@@ -1,6 +1,8 @@
 import "./App.css";
 import Temperature from "./component/dashboard/temperature.js";
 import Emotion from "./component/dashboard/emotion.js";
+import World from "./component/dashboard/globe.js";
+
 import Trends from "./component/dashboard/trends.js";
 import Sentiment from "./component/dashboard/sentiment.js";
 import SideMenu from "./component/menu/side_menu.js";
@@ -50,8 +52,8 @@ function App() {
                 <Route path="/">
                 <div>
                 <Emotion /> <Temperature />
-                <Trends />
-                <Sentiment />
+                <Trends /> 
+                <Sentiment /><World />
                 </div>
               </Route>
               </Switch>

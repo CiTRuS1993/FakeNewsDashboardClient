@@ -21,7 +21,9 @@ function Emotion() {
         axios
           .get("/getEmotions")
           .then((res) => {
-            setEmotion(res.data.emotions);
+            let emotions = res.data.emotions.map((emo)=> {return {y: emo.amount, label: emo.label}})
+            setEmotion(emotions);
+            
         
           })
           .catch(() => {
