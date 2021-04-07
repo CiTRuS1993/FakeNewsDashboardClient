@@ -23,12 +23,13 @@ function App() {
 
   return (
     <div className="App">
-      {/* <header className="App-header">
-       
-      </header> */}
+      <header className="logo">
+       <h1>Fake News Dashboard</h1>
+      </header>
+      <div className='body'>
       <userContext.Provider value={[isAuthenticated, userHasAuthenticated]}>
         <Router>
-          <div>
+          <div className='menu'>
             <SideMenu />
           </div>
           
@@ -48,9 +49,12 @@ function App() {
                 </Route>
                 <Route path="/">
                 <div>
+                  <div className='row'>
                 <Emotion /> <Temperature />
+                  </div>
                 <Trends /> 
-                <Sentiment /><World />
+                <Sentiment />
+                <World />
                 </div>
               </Route>
               </Switch>
@@ -58,6 +62,7 @@ function App() {
          
         </Router>
       </userContext.Provider>
+      </div>
     </div>
   );
 }

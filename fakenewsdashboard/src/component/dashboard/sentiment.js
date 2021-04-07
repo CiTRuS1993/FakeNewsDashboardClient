@@ -111,7 +111,7 @@ function Sentiment(){
 
       return(
 
-        <div className="Widget">
+        <div className="sentiment">
         <CanvasJSChart options = {options} 
             /* onRef={ref => this.chart = ref} */
         />
