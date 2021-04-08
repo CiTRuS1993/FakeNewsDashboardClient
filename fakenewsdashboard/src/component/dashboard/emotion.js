@@ -39,7 +39,7 @@ function Emotion() {
         )
     }
     return(
-        <div className="Widget">
+        <div className="emotions">
              <Pie title="Current emotions distirbution" dataPoints ={emotions} onClick={emotion_choose}
 				/* onRef={ref => this.chart = ref} */
 			/>

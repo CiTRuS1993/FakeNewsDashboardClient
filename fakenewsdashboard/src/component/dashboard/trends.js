@@ -54,7 +54,7 @@ function Trends() {
         axios
           .get("/api/getTrends")
           .then((res) => {
-
+            alert("d")
             let trnd =[];
             let wrds = {};
             let stat = {};
@@ -62,6 +62,10 @@ function Trends() {
                 trnd.push(trend);
                 wrds[trend] = res.data[trend].words;
                 stat[trend] = res.data[trend].statistics;
+                // console.log(res.data[trend].statistics)
+                // stat[trend] =  res.data[trend].statistics.map((stat)=> 
+                //     {return {sentiment: stat.avgSentiment, emotion: stat.mainEmo, real:stat.avgFakiness}})
+
             }
             setTrends(trnd);
             setWords(wrds);
@@ -82,7 +86,7 @@ function Trends() {
       let trendsView = trends.map((trend) =><TrendBlock trend={trend} statistics={statistics[trend]} words={words[trend]} />)
 
       return (
-        <div className="Widget">
+        <div className="trends">
             {trendsView}
         </div>
       )

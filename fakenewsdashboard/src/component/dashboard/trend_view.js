@@ -10,11 +10,12 @@ export default function TrendView(props){
         axios
           .get("/getTopics",{trend:props.match.params.trend})
           .then((res) => {
-            setTopics(res.data.topics);
+
+            setTopics( res.data.topics);
         
           })
           .catch(() => {
-            setTopics([{id:0,topic:[{text:"donald",value:50},{text:"Trump",value:45}],statistics:{sentiment:2,emotion:"happy",real:"fake"}},{id:1,topic:[{text:"donald",value:50},{text:"Trump",value:45}],sentiment:2,statistics:{emotion:"happy",real:"true"}}])
+            setTopics([{id:0,topic:[{text:"Donald",value:50},{text:"Trump",value:45}],statistics:{sentiment:2,emotion:"happy",real:"fake"}},{id:1,topic:[{text:"liar",value:25},{text:"success",value:45},{text:"cheap",value:30}],sentiment:2,statistics:{sentiment:-1, emotion:"happy",real:"true"}}])
           });
       }
       useEffect(() => {

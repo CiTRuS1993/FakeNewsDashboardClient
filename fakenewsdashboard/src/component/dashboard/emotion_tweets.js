@@ -5,13 +5,14 @@ export default function EmotionTweets(props){
     const [tweets,setTweets] = useState([])
     async function getEmotions() {
         axios
-          .get("/api/getEmotionsTweet",{emotion:props.match.params.emo})
+          .get("/api/getEmotionsTweet",{
+            params: {emotion:props.match.params.emo}})
           .then((res) => {
             setTweets(res.data.tweets);
         
           })
           .catch(() => {
-            setTweets([{id:"1361577298282094592",emotion:"happy",real:"fake"},{id:"1361577298282094592",emotion:"happy",real:"true"}])
+            setTweets([{id:"1361577298282094592",emotion:"happy",real:"fake", sentiment:-3},{id:"1361577298282094592",emotion:"happy",real:"true", sentiment:1}])
           });
       }
       useEffect(() => {
