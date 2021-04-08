@@ -19,7 +19,7 @@ function Emotion() {
 
     async function getEmotions() {
         axios
-          .get("/getEmotions")
+          .get("/api/getEmotions")
           .then((res) => {
             let emotions = res.data.emotions.map((emo)=> {return {y: emo.amount, label: emo.label}})
             setEmotion(emotions);

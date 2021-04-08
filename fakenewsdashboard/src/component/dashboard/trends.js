@@ -52,7 +52,7 @@ function Trends() {
 
     async function getTrends() {
         axios
-          .get("/getTrends")
+          .get("/api/getTrends")
           .then((res) => {
 
             let trnd =[];

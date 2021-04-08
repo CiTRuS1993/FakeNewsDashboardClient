@@ -26,9 +26,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 const axios = require("axios"); 
-app.use('/njsw07/',express.static(path.join(__dirname, 'build')));
-app.use(express.static(path.join(__dirname, 'build')));
-app.get('/*', function(req, res) {
+
+app.use('//api/*', function(req, res) {
   console.log("Got a GET request for")
   // fetch('http://localhost:5000'+req.originalUrl).then(function(response) {
   //   // return response.json();
@@ -42,6 +41,9 @@ app.get('/*', function(req, res) {
   }).catch(()=>res.send('e'))
   
 });
+app.use('/njsw07/',express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, 'build')));
+
 // app.get('/getEmotions', function (req, res) {
 //   console.log(req)
 

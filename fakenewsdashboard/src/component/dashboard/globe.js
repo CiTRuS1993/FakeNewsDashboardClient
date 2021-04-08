@@ -2,7 +2,8 @@ import Globe from 'react-globe.gl';
 
 import React, { useState, useEffect } from "react";
 import jsondata from '../../utils/ne_110m_populated_places_simple.json.js'
-
+import globe_img from '../../utils/earth-night.jpg';
+import night from '../../utils/night-sky.png'
 export default function World (){
     const [places, setPlaces] = useState(jsondata);
    
@@ -23,8 +24,8 @@ export default function World (){
     }));
   
     return <Globe
-      globeImageUrl="//unpkg.com/three-globe/example/img/earth-night.jpg"
-      backgroundImageUrl="//unpkg.com/three-globe/example/img/night-sky.png"
+      globeImageUrl={globe_img}
+      backgroundImageUrl={night}
       arcsData={arcsData}
       arcLabel={d=>d.label}
       arcColor={'color'}

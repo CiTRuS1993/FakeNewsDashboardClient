@@ -13,7 +13,7 @@ export default function Login() {
     const [password, setPassword] = useState("")
     const submit = () => {
 
-        axios.get('/token', {
+        axios.get('/api/token', {
             auth:{
             username: username,
             password: password

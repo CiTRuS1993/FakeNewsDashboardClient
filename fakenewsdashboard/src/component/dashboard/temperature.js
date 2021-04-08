@@ -12,7 +12,7 @@ function Temperature() {
 
   async function getTemp() {
     axios
-      .get("/getTemp")
+      .get("/api/getTemp")
       .then((res) => {
         setSentiment(res.data.sentiment);
         setFakiness(res.data.fakiness);
