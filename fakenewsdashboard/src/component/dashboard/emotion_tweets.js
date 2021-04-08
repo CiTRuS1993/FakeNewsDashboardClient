@@ -12,7 +12,7 @@ export default function EmotionTweets(props){
         
           })
           .catch(() => {
-            setTweets([{id:"1361577298282094592",emotion:"happy",real:"fake"},{id:"1361577298282094592",emotion:"happy",real:"true"}])
+            setTweets([{id:"1361577298282094592",emotion:"happy",real:"fake", sentiment:-3},{id:"1361577298282094592",emotion:"happy",real:"true", sentiment:1}])
           });
       }
       useEffect(() => {
