@@ -55,7 +55,7 @@
   /* border: 3px solid black; */
   display: flex;
   flex-direction: row;
-  height: 70vh; 
+  /* height: 70vh;  */
   border: 70vh;
 
   color: rgb(100, 52, 52);
@@ -78,18 +78,23 @@
 }
 
 .row {
-  display: flex;
+  display: inline-flex;
   flex-direction: row-reverse;
-  width: 80vh;
-  height: 80vh;
+  width: 5vh;
+  height: 40vh;
   align-items: center;
   
 }
 
+/* .canvasjs-chart-container{
+  height: 40vh;
+ 
+} */
+
 .emotions {
   /* width: 400px;*/
   /* width: 40vh; */
-  height: 70vh; 
+  height: 30vh; 
   border: 80vh; 
   border-color: solid black;
 
@@ -112,8 +117,8 @@
 .menu {
   width: 36vh;
   /* height: 333vh; */
-  height: 100vh;
-  color:deeppink;
+  height: 140vh;
+  /* color:deeppink; */
   /* background-color: rgb(73, 129, 36); */
 }
 /* 
