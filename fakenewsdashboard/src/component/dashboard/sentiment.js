@@ -82,8 +82,9 @@ function Sentiment(){
             name: "claims",
             showInLegend: true,
             dataPoints: claims
-        }
-    ]
+        }],
+        // weight: "90vh",
+        // height: "20vh"
     }
 
     async function getSentiment() {

@@ -58,13 +58,15 @@ function Trends() {
             let trnd =[];
             let wrds = {};
             let stat = {};
+            console.log(res.data)
+
             for (let trend in res.data) {
                 trnd.push(trend);
                 wrds[trend] = res.data[trend].words;
-                stat[trend] = res.data[trend].statistics;
-                // console.log(res.data[trend].statistics)
-                // stat[trend] =  res.data[trend].statistics.map((stat)=> 
-                //     {return {sentiment: stat.avgSentiment, emotion: stat.mainEmo, real:stat.avgFakiness}})
+                // stat[trend] = res.data[trend].statistics;
+                console.log(res.data[trend].statistics)
+                stat[trend] =  res.data[trend].statistics.map((stat)=> 
+                    {return {sentiment: stat.avgSentiment, emotion: stat.mainEmo, real:stat.avgFakiness}})
 
             }
             setTrends(trnd);
