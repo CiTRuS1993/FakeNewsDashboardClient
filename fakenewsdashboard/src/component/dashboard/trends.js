@@ -54,7 +54,7 @@ function Trends() {
         axios
           .get("/getTrends")
           .then((res) => {
-            alert("d")
+            // alert("d")
             let trnd =[];
             let wrds = {};
             let stat = {};
