@@ -34,7 +34,18 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.flex-container {
+  display: flex;
+}
 
+.flex-child {
+  flex: 1;
+  /* border: 2px solid yellow; */
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
 .Content {
   /* background-color: #282c34; */
   /* min-height: 100vh; */
@@ -72,7 +83,8 @@
   /* color: #61dafb; */
   display: grid;
   border: 1px solid black;
-  width: 50vh;
+  overflow: hidden;
+  /* width: 50vh; */
   /* flex-direction: row; */
   /* height: 200vh;  */
 }
@@ -156,7 +168,7 @@
 
 .trends {
   /* width: 400px;*/
-  height: 40vh;  /*size of the trend itself*/
+  /* height: 40vh;  size of the trend itself */
   /* display: inline;
   align-self: flex-end; */
   border: 80vh; 
