@@ -81,9 +81,10 @@
 
 .Trend {
   /* color: #61dafb; */
-  display: grid;
+  display: table-cell;
   border: 1px solid black;
   overflow: hidden;
+  
   /* width: 50vh; */
   /* flex-direction: row; */
   /* height: 200vh;  */
