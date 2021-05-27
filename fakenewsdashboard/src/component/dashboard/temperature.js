@@ -30,37 +30,46 @@ function Temperature() {
 
   return (
     <div className="Widget">
-        <Thermometer
-          theme="dark"
-          value={sentiment}
-          max="100"
-          steps="3"
-          format="%"
-          size="large"
-          height="300"
-        /><h3>sentiment</h3>
         
+        <h3>fake</h3>
         <Thermometer
           theme="dark"
           value={fakiness}
           max="100"
           steps="3"
           format="%"
-          size="large"
-          height="300"
-          
-          
-        /><h3>fakiness</h3>
+          // size="large"
+          size="medium"
+          // height="300" 
+          height="200"                   
+        />
         
+        <h3>positive</h3>
+        <Thermometer
+          theme="dark"
+          value={sentiment}
+          max="100"
+          steps="3"
+          format="%"
+          // size="large"
+          size="medium"
+          // height="300" 
+          height="200" 
+          />
+        
+        <h3>authenticity</h3> 
         <Thermometer
           theme="dark"
           value={authenticity}
           max="100"
           steps="3"
           format="%"
-          size="large"
-          height="300"
-        /><h3>authenticity</h3> 
+          // size="large"
+          size="medium"
+          // height="300" 
+          height="200" 
+        />
+        
     </div>
   );
 }

@@ -1,24 +1,28 @@
 .App {
   text-align: center;
-  display: flex;
-  position: relative;
+  align-items: block;
+  /* display: flex; */
+  flex-direction: block;
+  /* position: relative; */
+  /* background-color: #b4c0b8; */
+
 }
 .Login {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 64px;
-}
-.App-logo {
+ }
+/*.App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} */
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -30,39 +34,77 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
 .Content {
   /* background-color: #282c34; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  /* height: fit-content; */
   display: inline-block;
-  flex-direction: row;
+  flex-direction: column;
   align-items: left;
+  width: 80%;
   /* justify-content: center; */
-  /* font-size: calc(10px + 2vmin);
-  color: white; */
+  /* font-size: calc(10px + 2vmin);*/
 }
 
 .App-link {
   color: #61dafb;
 }
+
 .Widget {
-  border: 3px solid black;
+  /* border: 3px solid black; */
   display: flex;
   flex-direction: row;
+  /* height: 70vh;  */
+  border: 70vh;
 
   color: rgb(100, 52, 52);
   /* margin: 20px;
   padding: 20px;
    */
 }
+
 .Topic{
   display:-webkit-box
 }
+
 .Trend {
   /* color: #61dafb; */
   display: grid;
   border: 1px solid black;
+  width: 50vh;
+  /* flex-direction: row; */
+  /* height: 200vh;  */
 }
 
+.row {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  width: 5vh;
+  height: 40vh;
+  align-items: center;
+  
+}
+
+/* .canvasjs-chart-container{
+  height: 40vh;
+ 
+} */
+
+.emotions {
+  /* width: 400px;*/
+  /* width: 40vh; */
+  height: 30vh; 
+  border: 80vh; 
+  border-color: solid black;
+
+  /* display: flex;
+  flex-direction: row; */
+
+  color: rgb(100, 52, 52);
+}
+
+/* 
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -70,4 +112,60 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.menu {
+  width: 36vh;
+  /* height: 333vh; */
+  height: 140vh;
+  /* color:deeppink; */
+  /* background-color: rgb(73, 129, 36); */
+}
+/* 
+.App-header {
+    size: 10vh;
+    line-height: 10vh;
+} */
+
+.logo {
+  /* background-color: rgb(106, 126, 185); */
+  background-color: rgba(116, 16, 16, 0.952); 
+
+  height: 80px;
+  width: 100%;
+  align-items: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.body {
+  text-align: center;
+  align-items: row;
+  display: flex;
+  flex-direction: row;
+  /* position: relative; */
+}
+
+/* .h1 {
+  color: white;
+  background-color: white;
+  /* background-color: rgb(106, 126, 185); */
+  /* border-color: deeppink; */
+/*} */
+
+.trends {
+  /* width: 400px;*/
+  height: 40vh;  /*size of the trend itself*/
+  /* display: inline;
+  align-self: flex-end; */
+  border: 80vh; 
+  display: flex;
+  flex-direction: row;
+  /* border-color: solid black; */
+
+  /* display: flex;
+  flex-direction: row; */
+
+  /* color: rgb(100, 52, 52); */
 }

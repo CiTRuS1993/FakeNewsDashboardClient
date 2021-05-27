@@ -82,8 +82,9 @@ function Sentiment(){
             name: "claims",
             showInLegend: true,
             dataPoints: claims
-        }
-    ]
+        }],
+        // weight: "90vh",
+        // height: "20vh"
     }
 
     async function getSentiment() {
@@ -111,7 +112,7 @@ function Sentiment(){
 
       return(
 
-        <div className="Widget">
+        <div className="sentiment">
         <CanvasJSChart options = {options} 
             /* onRef={ref => this.chart = ref} */
         />

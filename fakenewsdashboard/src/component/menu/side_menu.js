@@ -10,8 +10,9 @@ function SideMenu(){
     return(
     <ProSidebar>
         <SidebarHeader>
-    <h5>hello {isAuthenticated.username}</h5>
-    
+    {/* <h5>hello {isAuthenticated.username}</h5> */}
+    <h5>Welcome</h5>
+
   </SidebarHeader>
     <Menu iconShape="square">
     {register_login}

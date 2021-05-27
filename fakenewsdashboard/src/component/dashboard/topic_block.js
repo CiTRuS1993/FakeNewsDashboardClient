@@ -17,7 +17,7 @@ export default function TopicBlock(props){
         <div className="Trend" onClick={() =>setClicked(true)}>
             <h2>{props.trend}</h2>
 
-            <ReactWordcloud words={props.topic} size={[50, 50]}/><br/>
+            <ReactWordcloud words={props.topic} size={[200, 200]}/><br/>
             <br/>
             
             {statistics}
