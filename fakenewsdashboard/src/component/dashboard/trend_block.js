@@ -121,7 +121,7 @@ function TrendBlock(props) {
       </div>
       <div class="flex-container">
         <div class="flex-child">
-          <div style={{ height: 100, width: 100 }}><img src={emojis[props.statistics.mainEmo]} height="100" alt ={props.avgEmotion}></img></div></div>
+          <div style={{ height: 100, width: 100 }}><img src={emojis[props.statistics.emotion]} height="100" alt ={props.emotion}></img></div></div>
           <div class="flex-child">
             <CanvasJSChart
               options={options}
