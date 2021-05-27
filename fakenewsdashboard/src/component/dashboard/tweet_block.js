@@ -4,7 +4,7 @@ export default function TweetBlock(props) {
     
     return(
         <div >
-            <TwitterTweetEmbed tweetId={props.tweetId} options={{height: 200,width:500}}/><h3> emotion:{props.emotion}, {props.real}</h3>
+            <TwitterTweetEmbed tweetId={props.tweetId} options={{height: 200,width:500}}/><h3> emotion:{props.emotion}</h3>
         </div>
     )
 
