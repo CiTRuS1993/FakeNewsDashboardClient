@@ -38,10 +38,10 @@ const stubwords = {"Donald Trump":[
 const stubtrending = ["Donald Trump","some Trends"]
 
 const stubstat = {"Donald Trump":{
-mainEmo:"fear",avgSentiment:57,avgAuthenticity:17,avgFakiness:78
+emotion:"fear",sentiment:-1,avg_fake:78
 },
 "some Trends":{
-    mainEmo:"happy",avgSentiment:3,avgAuthenticity:87,avgFakiness:2
+    emotion:"happy",sentiment:3,avg_fake:2
     }
 }
 function Trends() {
@@ -66,7 +66,7 @@ function Trends() {
                 // stat[trend] = res.data[trend].statistics;
                 console.log(res.data[trend].statistics)
                 stat[trend] =  res.data[trend].statistics.map((stat)=> 
-                    {return {sentiment: stat.avgSentiment, emotion: stat.mainEmo, real:stat.avgFakiness}})
+                    {return {sentiment: stat.sentiment, emotion: stat.emotion, real:stat.avg_fake}})
 
             }
             setTrends(trnd);
