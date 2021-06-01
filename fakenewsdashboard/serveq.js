@@ -38,7 +38,7 @@ app.use('//api/*', function(req, res) {
   .then((r) => {
     // setEmotion(res.data.emotions);
     res.send(JSON.stringify(r.data))
-  }).catch(()=>res.send('e'))
+  }).catch(()=>res.status(504).send('Server unavailable'))
   
 });
 app.use('/njsw07/',express.static(path.join(__dirname, 'build')));
