@@ -38,8 +38,10 @@ function Temperature() {
           max="100"
           steps="3"
           format="%"
-          size="large"
-          height="300"          
+          // size="large"
+          size="medium"
+          // height="300" 
+          height="200"                   
         />
         
         <h3>positive</h3>
@@ -49,8 +51,10 @@ function Temperature() {
           max="100"
           steps="3"
           format="%"
-          size="large"
-          height="300"
+          // size="large"
+          size="medium"
+          // height="300" 
+          height="200" 
           />
         
         <h3>authenticity</h3> 
@@ -60,8 +64,10 @@ function Temperature() {
           max="100"
           steps="3"
           format="%"
-          size="large"
-          height="300"
+          // size="large"
+          size="medium"
+          // height="300" 
+          height="200" 
         />
         
     </div>

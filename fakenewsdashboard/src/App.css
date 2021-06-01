@@ -34,17 +34,28 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.flex-container {
+  display: flex;
+}
 
+.flex-child {
+  flex: 1;
+  /* border: 2px solid yellow; */
+}  
+
+.flex-child:first-child {
+  margin-right: 20px;
+} 
 .Content {
   /* background-color: #282c34; */
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  /* height: fit-content; */
   display: inline-block;
   flex-direction: column;
   align-items: left;
   width: 80%;
   /* justify-content: center; */
-  /* font-size: calc(10px + 2vmin);
-  color: white; */
+  /* font-size: calc(10px + 2vmin);*/
 }
 
 .App-link {
@@ -55,7 +66,7 @@
   /* border: 3px solid black; */
   display: flex;
   flex-direction: row;
-  height: 70vh; 
+  /* height: 70vh;  */
   border: 70vh;
 
   color: rgb(100, 52, 52);
@@ -70,26 +81,33 @@
 
 .Trend {
   /* color: #61dafb; */
-  display: grid;
+  display: table-cell;
   border: 1px solid black;
-  width: 50vh;
+  overflow: hidden;
+  
+  /* width: 50vh; */
   /* flex-direction: row; */
   /* height: 200vh;  */
-
 }
 
 .row {
-  display: flex;
+  display: inline-flex;
   flex-direction: row-reverse;
-  width: 80vh;
-  height: 80vh;
+  width: 5vh;
+  height: 40vh;
   align-items: center;
+  
 }
+
+/* .canvasjs-chart-container{
+  height: 40vh;
+ 
+} */
 
 .emotions {
   /* width: 400px;*/
   /* width: 40vh; */
-  height: 70vh; 
+  height: 30vh; 
   border: 80vh; 
   border-color: solid black;
 
@@ -111,7 +129,9 @@
 
 .menu {
   width: 36vh;
-  height: 333vh;
+  /* height: 333vh; */
+  height: 140vh;
+  /* color:deeppink; */
   /* background-color: rgb(73, 129, 36); */
 }
 /* 
@@ -121,7 +141,9 @@
 } */
 
 .logo {
-  background-color: rgb(106, 126, 185);
+  /* background-color: rgb(106, 126, 185); */
+  background-color: rgba(116, 16, 16, 0.952); 
+
   height: 80px;
   width: 100%;
   align-items: center;
@@ -137,15 +159,19 @@
   flex-direction: row;
   /* position: relative; */
 }
-/* 
-.h1 {
-  color: white;
 
-} */
+/* .h1 {
+  color: white;
+  background-color: white;
+  /* background-color: rgb(106, 126, 185); */
+  /* border-color: deeppink; */
+/*} */
 
 .trends {
   /* width: 400px;*/
-  /* height: 80vh;  */
+  /* height: 40vh;  size of the trend itself */
+  /* display: inline;
+  align-self: flex-end; */
   border: 80vh; 
   display: flex;
   flex-direction: row;

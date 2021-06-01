@@ -57,7 +57,7 @@ function App() {
                   </div>
                 <Trends /> 
                 <Sentiment />
-                <World />
+                {/* <World /> */}
                 </div>
               </Route>
               </Switch>
