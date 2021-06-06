@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <header className="logo">
-       <h1>Fake News Dashboard</h1>
+       {/* <h1>Fake News Dashboard</h1> */}
       </header>
       <div className='body'>
       <userContext.Provider value={[isAuthenticated, userHasAuthenticated]}>
