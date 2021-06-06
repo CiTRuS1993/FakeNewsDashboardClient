@@ -45,10 +45,12 @@ emotion:"fear",sentiment:-1,avg_fake:78
     }
 }
 function Trends() {
-    const [trends,setTrends] = useState(stubtrending)
-    const [words,setWords] = useState(stubwords)
-    const [statistics,setStatistics] = useState(stubstat)
-
+    const [trending,setTrends] = useState({trend:stubtrending,words:stubwords,statistics:stubstat})
+    // const [words,setWords] = useState(stubwords)
+    // const [statistics,setStatistics] = useState(stubstat)
+    let trends = trending.trend
+    let words = trending.words
+    let statistics = trending.statistics
 
     async function getTrends() {
         axios
@@ -65,19 +67,18 @@ function Trends() {
                 wrds[trend] = res.data[trend].words;
                 // stat[trend] = res.data[trend].statistics;
                 console.log(res.data[trend].statistics)
-                stat[trend] =  res.data[trend].statistics.map((stat)=> 
-                    {return {sentiment: stat.sentiment, emotion: stat.emotion, real:stat.avg_fake}})
+                  let s = res.data[trend].statistics
+                  stat[trend] =    {sentiment: s.sentiment, emotion: s.emotion, real:s.avg_fake}
 
             }
-            setTrends(trnd);
-            setWords(wrds);
-            setStatistics(stat)
+            setTrends({trend:trnd,words:wrds,statistics:stat});
+            // setWords(wrds);
+            // setStatistics(stat)
         
           })
           .catch(() => {
-            setTrends(stubtrending);
-            setWords(stubwords);
-            setStatistics(stubstat)
+            setTrends({trend:stubtrending,words:stubwords,statistics:stubstat});
+            
           });
       }
       useEffect(() => {
