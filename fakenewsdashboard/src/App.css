@@ -142,9 +142,10 @@
 
 .logo {
   /* background-color: rgb(106, 126, 185); */
-  background-color: rgba(116, 16, 16, 0.952); 
-
-  height: 80px;
+  /* background-color: rgba(116, 16, 16, 0.952);  */
+  background-image: url('./utils/banner.jpg');
+  height: 118px;
+  background-size: 100%;
   width: 100%;
   align-items: center;
   align-content: center;
