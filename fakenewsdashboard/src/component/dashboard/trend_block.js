@@ -33,14 +33,14 @@ const stubtweets = [
 ];
 
 const emojis = {
-    sad :sad,
+    Sad :sad,
 
-    angry :angry,
+    Angry :angry,
 
-    happy : happy,
-    surprised : surprised,
-    digust : disgust,
-    fear:surprised
+    Happy : happy,
+    Surprise : surprised,
+    Digust : disgust,
+    Fear:surprised
 }
 const options = {
   animationEnabled: true,
