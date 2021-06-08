@@ -14,7 +14,7 @@ export default function Register() {
     const [mail, setMail] = useState("")
     const submit = () => {
 
-        axios.get('/token', {
+        axios.get('/api/token', {
             auth:{
             username: username,
             password: password

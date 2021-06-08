@@ -89,7 +89,7 @@ function Sentiment(){
 
     async function getSentiment() {
         axios
-          .get("/getSentiment")
+          .get("/api/getSentiment")
           .then((res) => {
             let topics = res.data.topics.map((sent)=> {return {y: sent.sentiment, label: sent.date}})
             let claims = res.data.claims.map((sent)=> {return {y: sent.sentiment, label: sent.date}})

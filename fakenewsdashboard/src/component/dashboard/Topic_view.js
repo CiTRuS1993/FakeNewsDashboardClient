@@ -33,7 +33,7 @@ export default function TopicView(props){
     const [emotion,setEmotion] = useState([])
     async function getTopic() {
         axios
-          .get("/getTopic",{
+          .get("/api/getTopic",{
             params:{topic:props.match.params.topic}})
           .then((res) => {
             setTweets(res.data.tweets);

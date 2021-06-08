@@ -54,6 +54,7 @@
   flex-direction: column;
   align-items: left;
   width: 80%;
+  
   /* justify-content: center; */
   /* font-size: calc(10px + 2vmin);*/
 }
@@ -63,12 +64,15 @@
 }
 
 .Widget {
-  /* border: 3px solid black; */
+  box-shadow: -10px 10px 5px grey;
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
+  background-color: white;
   /* height: 70vh;  */
-  border: 70vh;
-
+  /* border: 70vh; */
+  /* border: black; */
   color: rgb(100, 52, 52);
   /* margin: 20px;
   padding: 20px;
@@ -78,11 +82,16 @@
 .Topic{
   display:-webkit-box
 }
-
+.sentiment{
+  padding-top: 10px;
+}
 .Trend {
   /* color: #61dafb; */
   display: table-cell;
-  border: 1px solid black;
+  box-shadow: -10px 10px 5px grey;
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 25px;
+  margin-left: 10px;
   overflow: hidden;
   
   /* width: 50vh; */
@@ -93,7 +102,7 @@
 .row {
   display: inline-flex;
   flex-direction: row-reverse;
-  width: 5vh;
+  /* width: 5vh; */
   height: 40vh;
   align-items: center;
   
@@ -105,13 +114,25 @@
 } */
 
 .emotions {
-  /* width: 400px;*/
+  /* width: 400px; */
   /* width: 40vh; */
-  height: 30vh; 
-  border: 80vh; 
-  border-color: solid black;
-
-  /* display: flex;
+  width: 606px;
+  box-shadow: -10px 10px 5px grey;
+  border: 1px solid rgb(117, 117, 117);
+  border-radius: 25px;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin-left: 10px;
+  /* float: left; */
+  /* height: 300px; */
+  /* width: fit-content;  */
+  box-sizing: border-box;
+  /* height: fit-content; */
+  /* border: 80vh; 
+  border-color: solid black; */
+  /* border: 3px solid black; */
+  display: inline-block;/*
+  
   flex-direction: row; */
 
   color: rgb(100, 52, 52);
@@ -144,7 +165,8 @@
   /* background-color: rgb(106, 126, 185); */
   /* background-color: rgba(116, 16, 16, 0.952);  */
   background-image: url('./utils/banner.jpg');
-  height: 118px;
+  height: 17.5vh;
+  background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   align-items: center;
@@ -158,6 +180,7 @@
   align-items: row;
   display: flex;
   flex-direction: row;
+  background-color: #c3c9d4;
   /* position: relative; */
 }
 
@@ -173,7 +196,8 @@
   /* height: 40vh;  size of the trend itself */
   /* display: inline;
   align-self: flex-end; */
-  border: 80vh; 
+  /* border: 80vh;  */
+  padding-left: 35px;
   display: flex;
   flex-direction: row;
   /* border-color: solid black; */

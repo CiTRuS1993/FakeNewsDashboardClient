@@ -21,18 +21,21 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=8107 &&  react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+ 
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
     ]
   },
-  "proxy": "http://localhost:5000",
+  "homepage": ".",
+   "proxy": "http://localhost:5000",
+
   "browserslist": {
     "production": [
       ">0.2%",

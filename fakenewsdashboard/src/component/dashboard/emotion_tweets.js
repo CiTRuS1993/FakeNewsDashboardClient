@@ -5,7 +5,7 @@ export default function EmotionTweets(props){
     const [tweets,setTweets] = useState([])
     async function getEmotions() {
         axios
-          .get("/getEmotionsTweet",{
+          .get("/api/getEmotionsTweet",{
             params: {emotion:props.match.params.emo}})
           .then((res) => {
             setTweets(res.data.tweets);

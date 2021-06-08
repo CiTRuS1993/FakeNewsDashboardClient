@@ -11,16 +11,19 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./component/users/Login";
 import Register from "./component/users/register";
 import EmotionTweets from "./component/dashboard/emotion_tweets.js";
+import axios from "axios"; 
+
 import { userContext } from "./utils/userContext";
 import TrendView from "./component/dashboard/trend_view.js"
 import TopicView from "./component/dashboard/Topic_view.js"
+axios.defaults.baseURL = process.env.PUBLIC_URL || "http://localhost:5000";
 function App() {
   const [isAuthenticated, userHasAuthenticated] = useState({
     auth: false,
     username: "test",
     token: "",
   });
-
+  console.log('public url: ', process.env.PUBLIC_URL)
   return (
     <div className="App">
       <header className="logo">
@@ -28,10 +31,10 @@ function App() {
       </header>
       <div className='body'>
       <userContext.Provider value={[isAuthenticated, userHasAuthenticated]}>
-        <Router>
-          <div className='menu'>
+        <Router basename={process.env.PUBLIC_URL}> 
+          {/* <div className='menu'>
             <SideMenu />
-          </div>
+          </div> */}
           
             <div className="Content">
             <Switch>

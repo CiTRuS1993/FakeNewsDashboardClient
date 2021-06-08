@@ -19,7 +19,7 @@ function Emotion() {
 
     async function getEmotions() {
         axios
-          .get("/getEmotions")
+          .get("/api/getEmotions")
           .then((res) => {
             let emotions = res.data.emotions.map((emo)=> {return {y: emo.amount, label: emo.label}})
             setEmotion(emotions);
@@ -39,11 +39,13 @@ function Emotion() {
         )
     }
     return(
+        // <div className="widget">
         <div className="emotions">
              <Pie title="Current emotions distirbution" dataPoints ={emotions} onClick={emotion_choose} height= "200" width="600"
 				/* onRef={ref => this.chart = ref} */
 			/>
         </div>
+        // </div>
     )
 
 }
