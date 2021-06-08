@@ -121,6 +121,7 @@
   border: 1px solid rgb(117, 117, 117);
   border-radius: 25px;
   box-sizing: border-box;
+  overflow: hidden;
   margin-left: 10px;
   /* float: left; */
   /* height: 300px; */
@@ -164,7 +165,8 @@
   /* background-color: rgb(106, 126, 185); */
   /* background-color: rgba(116, 16, 16, 0.952);  */
   background-image: url('./utils/banner.jpg');
-  height: 118px;
+  height: 17.5vh;
+  background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
   align-items: center;

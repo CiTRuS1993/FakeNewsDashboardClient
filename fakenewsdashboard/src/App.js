@@ -32,9 +32,9 @@ function App() {
       <div className='body'>
       <userContext.Provider value={[isAuthenticated, userHasAuthenticated]}>
         <Router basename={process.env.PUBLIC_URL}> 
-          <div className='menu'>
+          {/* <div className='menu'>
             <SideMenu />
-          </div>
+          </div> */}
           
             <div className="Content">
             <Switch>
