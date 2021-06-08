@@ -33,10 +33,12 @@ app.use('//api/*', function(req, res) {
   //   // return response.json();
   //   res.sendFile(path.join(__dirname, 'build', 'index.html'));
   // })
+  console.log("http://localhost:5000/"+req.params[0])
   axios
-  .get("http://localhost:5000"+req.params[0])
+  .get("http://localhost:5000/api/"+req.params[0])
   .then((r) => {
     // setEmotion(res.data.emotions);
+    
     res.send(JSON.stringify(r.data))
   }).catch(()=>res.status(504).send('Server unavailable'))
   

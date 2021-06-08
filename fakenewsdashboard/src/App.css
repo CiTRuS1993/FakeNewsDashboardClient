@@ -66,9 +66,10 @@
 .Widget {
   box-shadow: -10px 10px 5px grey;
   border: 1px solid rgb(117, 117, 117);
+  border-radius: 25px;
   display: flex;
   flex-direction: row;
-  
+  background-color: white;
   /* height: 70vh;  */
   /* border: 70vh; */
   /* border: black; */
@@ -89,6 +90,7 @@
   display: table-cell;
   box-shadow: -10px 10px 5px grey;
   border: 1px solid rgb(117, 117, 117);
+  border-radius: 25px;
   margin-left: 10px;
   overflow: hidden;
   
@@ -117,6 +119,7 @@
   width: 606px;
   box-shadow: -10px 10px 5px grey;
   border: 1px solid rgb(117, 117, 117);
+  border-radius: 25px;
   box-sizing: border-box;
   margin-left: 10px;
   /* float: left; */
@@ -175,6 +178,7 @@
   align-items: row;
   display: flex;
   flex-direction: row;
+  background-color: #c3c9d4;
   /* position: relative; */
 }
 
