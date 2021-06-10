@@ -71,9 +71,9 @@ export default function TopicBlock(props){
         statistics.push(<div><h4>{stat}  : {props.statistics[stat]} </h4> <br/></div>)
     }
     const [clicked,setClicked] = useState(false)
-    // if (clicked){
-    //     return    <Redirect to={"/topic/"+props.id} />
-    // }
+    if (clicked){
+        return    <Redirect to={"/topic/"+props.id} />
+    }
     return (
         <div className="Trend" onClick={() => setClicked(true)}>
       <div class="flex-container">

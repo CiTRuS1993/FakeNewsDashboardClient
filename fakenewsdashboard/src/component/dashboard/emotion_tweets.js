@@ -8,7 +8,7 @@ export default function EmotionTweets(props){
           .get("/api/getEmotionsTweet",{
             params: {emotion:props.match.params.emo}})
           .then((res) => {
-            setTweets(res.data.tweets);
+            setTweets(res.data);
         
           })
           .catch(() => {

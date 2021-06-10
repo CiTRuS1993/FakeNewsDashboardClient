@@ -35,7 +35,7 @@ const stubtweets = [
 const emojis = {
     Sad :sad,
 
-    Angry :angry,
+    Anger :angry,
 
     Happy : happy,
     Surprise : surprised,

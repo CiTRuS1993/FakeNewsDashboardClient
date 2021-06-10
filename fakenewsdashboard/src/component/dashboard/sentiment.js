@@ -54,6 +54,7 @@ function Sentiment(){
     const [trends,setTrends] = useState([])
 
 
+    var yLabels = ["Negative","Natural","Positive"];
 
     const options = {
         animationEnabled: true,	
@@ -66,6 +67,16 @@ function Sentiment(){
         toolTip: {
             shared: true
         },
+        axisY: {
+            interval: 3,
+            maximum: 3,
+            minimum:-3,
+            labelFormatter: function ( e ) {  
+                
+              var yCats = yLabels[(e.value+3)/3];
+              return yCats;
+            } 
+          },
         data: [{
             type: "spline",
             name: "topics",

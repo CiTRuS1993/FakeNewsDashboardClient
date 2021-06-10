@@ -169,7 +169,8 @@
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
-  align-items: center;
+  
+  align-items: start;
   align-content: center;
   display: flex;
   flex-direction: column-reverse;
@@ -200,6 +201,7 @@
   padding-left: 35px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   /* border-color: solid black; */
 
   /* display: flex;
@@ -207,3 +209,21 @@
 
   /* color: rgb(100, 52, 52); */
 }
+.dashboardbtn{
+  background-color: rgb(182, 172, 172);
+    height: 50%;
+    width: 80%;
+    display: flex;
+    margin-bottom: 9vh;
+    margin-left: 10vh;
+    padding: 0px;
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    /* padding: 15px 32px; */
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    /* margin: 4px 2px; */
+    cursor: pointer;}

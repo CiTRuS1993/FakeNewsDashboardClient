@@ -2,7 +2,7 @@ import "./App.css";
 import Temperature from "./component/dashboard/temperature.js";
 import Emotion from "./component/dashboard/emotion.js";
 import World from "./component/dashboard/globe.js";
-
+import { Link } from "react-router-dom";
 import Trends from "./component/dashboard/trends.js";
 import Sentiment from "./component/dashboard/sentiment.js";
 import SideMenu from "./component/menu/side_menu.js";
@@ -26,13 +26,17 @@ function App() {
   console.log('public url: ', process.env.PUBLIC_URL)
   return (
     <div className="App">
-      <header className="logo">
-       {/* <h1>Fake News Dashboard</h1> */}
-      </header>
-      <div className='body'>
       <userContext.Provider value={[isAuthenticated, userHasAuthenticated]}>
-        <Router basename={process.env.PUBLIC_URL}> 
-          {/* <div className='menu'>
+      <Router basename={process.env.PUBLIC_URL}> 
+      <header className="logo" align='left'>
+       {/* <h1>Fake News Dashboard</h1> */}
+       <Link to="/" ><button className="dashboardbtn">Dashboard</button></Link>
+      </header>
+      
+      <div className='body'>
+      
+        
+          {/* <div className='menu'> 
             <SideMenu />
           </div> */}
           
@@ -63,9 +67,10 @@ function App() {
               </Switch>
             </div>
          
-        </Router>
-      </userContext.Provider>
+        
       </div>
+      </Router>
+      </userContext.Provider>
     </div>
   );
 }
