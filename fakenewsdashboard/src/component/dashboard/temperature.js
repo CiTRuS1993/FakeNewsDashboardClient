@@ -8,7 +8,7 @@ function Temperature() {
 
   const [fakiness, setFakiness] = useState(0);
 
-  const [authenticity, setAuthenticity] = useState(0);
+  // const [authenticity, setAuthenticity] = useState(0);
 
   async function getTemp() {
     axios
@@ -16,12 +16,12 @@ function Temperature() {
       .then((res) => {
         setSentiment(res.data.sentiment);
         setFakiness(res.data.fakiness);
-        setAuthenticity(res.data.authenticity);
+        // setAuthenticity(res.data.authenticity);
       })
       .catch(() => {
         setSentiment(14);
         setFakiness(0);
-        setAuthenticity(2);
+        // setAuthenticity(2);
       });
   }
   useEffect(() => {
@@ -31,7 +31,7 @@ function Temperature() {
   return (
     <div className="Widget">
         
-        <h3>fake</h3>
+        <h3>Fake</h3>
         <Thermometer
           theme="dark"
           value={fakiness}
@@ -44,7 +44,7 @@ function Temperature() {
           height="200"                   
         />
         
-        <h3>positive</h3>
+        <h3>Positive</h3>
         <Thermometer
           theme="dark"
           value={sentiment}
@@ -57,7 +57,7 @@ function Temperature() {
           height="200" 
           />
         
-        <h3>authenticity</h3> 
+        {/* <h3>authenticity</h3> 
         <Thermometer
           theme="dark"
           value={authenticity}
@@ -68,7 +68,7 @@ function Temperature() {
           size="medium"
           // height="300" 
           height="200" 
-        />
+        /> */}
         
     </div>
   );
