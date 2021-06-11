@@ -35,7 +35,8 @@ app.use('//api/*', function(req, res) {
   // })
   console.log("http://localhost:5000/"+req.params[0])
   axios
-  .get("http://localhost:5000/api/"+req.params[0])
+  .get("http://localhost:5000/api/"+req.params[0],{
+    params: req.query})
   .then((r) => {
     // setEmotion(res.data.emotions);
     
@@ -52,5 +53,5 @@ app.use(express.static(path.join(__dirname, 'build')));
 //   console.log("Got a GET request for /list_user");
 //   res.send('Page Listing');
 // })
-console.log('s')
+
 app.listen(8107);

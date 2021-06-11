@@ -5,8 +5,8 @@ import Pie from '../../utils/canvasjs/pie_chart';
 
 function Emotion() {
     const [emotions, setEmotion] = useState([
-        { y: 32, label: "Anger" },
-        { y: 22, label: "Disgust" },
+        { y: 32, label: "Angry" },
+        
         { y: 15, label: "Sad" },
         { y: 19, label: "Happy" },
         { y: 5, label: "Surprise" },
@@ -21,7 +21,8 @@ function Emotion() {
         axios
           .get("/api/getEmotions")
           .then((res) => {
-            let emotions = res.data.emotions.map((emo)=> {return {y: emo.amount, label: emo.label}})
+            let sum = res.data.emotions.reduce((accumulator, currentValue) => accumulator + currentValue.amount,0)
+            let emotions = res.data.emotions.map((emo)=> {return {y: Math.round((emo.amount/sum)*100), label: emo.label}})
             setEmotion(emotions);
             
         
