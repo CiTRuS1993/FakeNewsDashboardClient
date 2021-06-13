@@ -4,47 +4,52 @@ import CanvasJSReact from '../../utils/canvasjs/canvasjs.react';
 // var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 const stubclaims = [
-    { y: 1, label: "1.1.2021" },
-    { y: 1, label: "2.1.2021" },
-    { y: 3, label: "3.1.2021" },
-    { y: 2, label: "4.1.2021" },
-    { y: -1, label: "5.1.2021" },
-    { y: 1, label: "6.1.2021" },
-    { y: 1, label: "7.1.2021" },
-    { y: 0, label: "8.1.2021" },
-    { y: -3, label: "9.1.2021" },
-    { y: 1, label: "10.1.2021"},
-    { y: -2, label: "11.1.2021"},
-    { y: 1, label: "12.1.2021"}
+    { y: 1, label: "1.6.2021" },
+    { y: 1, label: "2.6.2021" },
+    { y: 3, label: "3.6.2021" },
+    { y: 2, label: "4.6.2021" },
+    { y: -1, label: "5.6.2021" },
+    { y: 1, label: "6.6.2021" },
+    { y: 1, label: "7.6.2021" },
+    { y: 0, label: "8.6.2021" },
+    { y: -3, label: "9.6.2021" },
+    { y: 1, label: "10.6.2021"},
+    { y: -2, label: "11.6.2021"},
+    { y: 1, label: "12.6.2021"},
+    { y: 1, label: "13.6.2021"}
+
 ]
 const stubtrending = [
-    { y: 3, label: "1.1.2021" },
-    { y: 1, label: "2.1.2021" },
-    { y: 0, label: "3.1.2021" },
-    { y: 0, label: "4.1.2021" },
-    { y: 0, label: "5.1.2021" },
-    { y: 0, label: "6.1.2021" },
-    { y: 1, label: "7.1.2021" },
-    { y: -1, label: "8.1.2021" },
-    { y: 1, label: "9.1.2021" },
-    { y: 1, label: "10.1.2021"},
-    { y: 1, label: "11.1.2021"},
-    { y: -2, label: "12.1.2021"}
+    { y: 3, label: "1.6.2021" },
+    { y: 1, label: "2.6.2021" },
+    { y: 0, label: "3.6.2021" },
+    { y: 0, label: "4.6.2021" },
+    { y: 0, label: "5.6.2021" },
+    { y: 0, label: "6.6.2021" },
+    { y: 1, label: "7.6.2021" },
+    { y: -1, label: "8.6.2021" },
+    { y: 1, label: "9.6.2021" },
+    { y: 1, label: "10.6.2021"},
+    { y: 1, label: "11.6.2021"},
+    { y: -2, label: "12.6.2021"},
+    { y: 0, label: "13.6.2021"}
+
 ]
 
 const stubtopics = [
-    { y: 1, label: "1.1.2021" },
-    { y: 1, label: "2.1.2021" },
-    { y: -1, label: "3.1.2021" },
-    { y: 1, label: "4.1.2021" },
-    { y: 2, label: "5.1.2021" },
-    { y: 1, label: "6.1.2021" },
-    { y: 3, label: "7.1.2021" },
-    { y: -1, label: "8.1.2021" },
-    { y: 1, label: "9.1.2021" },
-    { y: 1, label: "10.1.2021"},
-    { y: -3, label: "11.1.2021"},
-    { y: 1, label: "12.1.2021"}
+    { y: 1, label: "1.6.2021" },
+    { y: 1, label: "2.6.2021" },
+    { y: -1, label: "3.6.2021" },
+    { y: 1, label: "4.6.2021" },
+    { y: 2, label: "5.6.2021" },
+    { y: 1, label: "6.6.2021" },
+    { y: 3, label: "7.6.2021" },
+    { y: -1, label: "8.6.2021" },
+    { y: 1, label: "9.6.2021" },
+    { y: 1, label: "10.6.2021"},
+    { y: -3, label: "11.6.2021"},
+    { y: 1, label: "12.6.2021"},
+    { y: -2, label: "13.6.2021"}
 ]
 
 
@@ -54,13 +59,13 @@ function Sentiment(){
     const [trends,setTrends] = useState([])
 
 
-    var yLabels = ["Negative","Natural","Positive"];
+    var yLabels = ["Negative","Neutral","Positive"];
 
     const options = {
         animationEnabled: true,	
-        title:{
-            text: "sentiment over time"
-        },
+         title:{
+        //     text: "sentiment over time"
+         },
         axisY : {
             title: "sentiment"
         },
@@ -94,7 +99,7 @@ function Sentiment(){
             showInLegend: true,
             dataPoints: claims
         }],
-        // weight: "90vh",
+        // width: "90vh",
         // height: "20vh"
     }
 
