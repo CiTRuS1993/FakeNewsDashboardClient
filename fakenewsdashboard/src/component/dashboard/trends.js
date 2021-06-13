@@ -66,7 +66,7 @@ function Trends() {
                 trnd.push(trend);
                 wrds[trend] = res.data[trend].words;
                 // stat[trend] = res.data[trend].statistics;
-                console.log(res.data[trend].statistics)
+                console.log(res.data[trend].statistics +"!!!!")
                   let s = res.data[trend].statistics
                   stat[trend] =    {sentiment: s.sentiment, emotion: s.emotion, real:s.avg_fake}
 
@@ -77,7 +77,7 @@ function Trends() {
         
           })
           .catch(() => {
-            setTrends({trend:stubtrending,words:stubwords,statistics:stubstat});
+            setTrends({trend:[],words:[],statistics:[]});
             
           });
       }

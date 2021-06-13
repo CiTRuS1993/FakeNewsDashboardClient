@@ -88,7 +88,7 @@ function TrendBlock(props) {
           {" "}
           <Thermometer
             theme="dark"
-            value={props.statistics.avgSentiment}
+            value={17*(3+props.statistics.avgSentiment)}
             max="100"
             steps="3"
             format="%"
