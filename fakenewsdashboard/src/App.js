@@ -30,7 +30,9 @@ function App() {
       <Router basename={process.env.PUBLIC_URL}> 
       <header className="logo" align='left'>
        {/* <h1>Fake News Dashboard</h1> */}
-       <Link to="/" ><button className="dashboardbtn">Dashboard</button></Link>
+       {/* <div className="button1"> */}
+        <Link to="/" ><button className="dashboardbtn">Dashboard</button></Link>
+      {/* </div> */}
       </header>
       
       <div className='body'>
@@ -56,11 +58,36 @@ function App() {
                 </Route>
                 <Route path="/">
                 <div>
+                  <div className='little_space'/>
                   <div className='row'>
-                <Emotion /> <Temperature />
+                    <div className= 'right_space'/>
+                    <div className= 'right_space'/>
+                    <div className='column'>
+                      {/* <h3>Overall Current Data analysis</h3> */}
+                      <div className='title1'/>
+                      <Temperature />
+                      <div className='space'/>
+                      <Emotion /> 
+                    </div>
+                    <div className='right_space'/>
+                    <div className= 'right_space'/>
+
+                    <div className='column'>
+                      {/* <h3>Overall tweets sentiment classification over time</h3> */}
+                      <div className='title2'/>
+                      {/* <div className='big_space'/> */}
+                      <div className='little_space'/>
+                      <Sentiment />
+                    </div>
                   </div>
+                <div className='big_space'/>
+                {/* <h3>Currently Hot trending topics</h3>
+                <h5>Google Trends trending topics analysis in the past 24 hours</h5> */}
+                <div className='title3'/>
+                <div className='title4'/>
                 <Trends /> 
-                <Sentiment />
+                {/* <h3>Overall tweets sentiment classification over time</h3>
+                <Sentiment /> */}
                 {/* <World /> */}
                 </div>
               </Route>
