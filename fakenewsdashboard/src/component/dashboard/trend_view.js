@@ -10,7 +10,6 @@ export default function TrendView(props){
         axios
           .get("/api/getTopics", {params: {trend:props.match.params.trend}})
           .then((res) => {
-
             setTopics( res.data.topics);
         
           })

@@ -34,8 +34,12 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-.flex-container {
+/* trends on the main window */
+.flex-container { 
   display: flex;
+  /* height: 20vh; */
+  margin-top: 5vh;
+  /* width: 30vh; */
 }
 
 .flex-child {
@@ -68,9 +72,14 @@
   border: 1px solid rgb(117, 117, 117);
   border-radius: 25px;
   display: flex;
+  /* align-self: flex-start; */
   flex-direction: row;
+  width: 50vh;
   background-color: white;
-  /* height: 70vh;  */
+  margin-left: 10vh;
+  /* position: center; */
+
+  /* height: 15vh;  */
   /* border: 70vh; */
   /* border: black; */
   color: rgb(100, 52, 52);
@@ -79,11 +88,30 @@
    */
 }
 
+.space{
+  padding-top: 5vh;
+}
+
+.little_space{
+  padding-top: 2.5vh;
+}
+
+
+.big_space{
+  padding-top: 40vh;
+}
+
 .Topic{
   display:-webkit-box
 }
 .sentiment{
+  /* padding-top: 3vh; */
   padding-top: 10px;
+  /* padding-bottom: 10px; */
+  width: 95vh;
+  /* padding-bottom: 10px; */
+  background-color: white;
+  /* flex-direction: row-reverse; */
 }
 .Trend {
   /* color: #61dafb; */
@@ -101,11 +129,19 @@
 
 .row {
   display: inline-flex;
-  flex-direction: row-reverse;
+  /* flex-direction: row; */
+  /* position: absolute; */
+  width: 100%;
+  height: 40vh;
+  align-items: center;
+}
+
+.column{
+  /* display: inline-flex; */
+  flex-direction: column;
   /* width: 5vh; */
   height: 40vh;
   align-items: center;
-  
 }
 
 /* .canvasjs-chart-container{
@@ -113,10 +149,16 @@
  
 } */
 
+.right_space{
+  padding-right: 5vh;
+}
+
+
 .emotions {
   /* width: 400px; */
   /* width: 40vh; */
-  width: 606px;
+  /* width: 606px; */
+  width: 50vh;
   box-shadow: -10px 10px 5px grey;
   border: 1px solid rgb(117, 117, 117);
   border-radius: 25px;
@@ -124,14 +166,16 @@
   overflow: hidden;
   margin-left: 10px;
   /* float: left; */
-  /* height: 300px; */
+  height: 203px;
   /* width: fit-content;  */
   box-sizing: border-box;
   /* height: fit-content; */
   /* border: 80vh; 
   border-color: solid black; */
   /* border: 3px solid black; */
-  display: inline-block;/*
+  display: inline-block;
+  margin-right: 10vh;
+  /*
   
   flex-direction: row; */
 
@@ -161,11 +205,61 @@
     line-height: 10vh;
 } */
 
+.title1{
+  background-image: url("./utils/overall_data_analysis_title.jpg");
+  background-repeat: no-repeat;
+  width: 80vh;
+  /* background-position: left; */
+  height: 15vh;
+    /* background-image: url("./utils/overall_data_analysis_title.jpg"); */
+
+}
+
+.title2{
+  background-image: url("./utils/sentiment_title.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 15vh;
+  /* background-size: 100%; */
+    /* background-image: url("./utils/overall_data_analysis_title.jpg"); */
+
+}
+
+.title3{
+  /* background-image: url("./utils/trending_topics_title.jpg"); */
+  background-image: url("./utils/1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 20vh;
+  width: 100%;
+  height: 15vh;
+  /* margin-top: ; */
+  /* background-size: 100%; */
+    /* background-image: url("./utils/overall_data_analysis_title.jpg"); */
+
+}
+
+.title4{
+  background-image: url("./utils/4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 20vh;
+
+  height: 8vh;
+  margin-bottom: 5vh;
+  background-size: 100%;
+  width: 1200px;
+    /* background-image: url("./utils/overall_data_analysis_title.jpg"); */
+
+}
+
 .logo {
-  /* background-color: rgb(106, 126, 185); */
+  background-color: #c3c9d4;
   /* background-color: rgba(116, 16, 16, 0.952);  */
   background-image: url('./utils/banner.jpg');
+  /* height: 16vh; */
   height: 17.5vh;
+
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
@@ -174,6 +268,10 @@
   align-content: center;
   display: flex;
   flex-direction: column-reverse;
+  /* align-items: baseline;
+  align-content: stretch;
+  display: inline-block;
+  flex-direction: row; */
 }
 
 .body {
@@ -209,16 +307,27 @@
 
   /* color: rgb(100, 52, 52); */
 }
+
+/* .button1{
+  height: 4vh;
+  align-items: flex-start;
+} */
+
 .dashboardbtn{
   background-color: rgb(182, 172, 172);
-    height: 50%;
+    height: 5vh;
+    /* width: 8vh; */
+    /* display: flex; */
+    /* margin-top: 2vh; */
+    /* height: 50%;
     width: 80%;
-    display: flex;
-    margin-bottom: 9vh;
+    display: flex;*/
+    margin-bottom: 9vh; 
     margin-left: 10vh;
     padding: 0px;
     color: rgb(0, 0, 0);
-    border-radius: 25px;
+    border-radius: 5vh;
+    /* border-radius: 25px; */
     /* padding: 15px 32px; */
     text-align: center;
     align-content: center;
