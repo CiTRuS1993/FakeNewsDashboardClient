@@ -33,14 +33,14 @@ const stubtweets = [
   ];
   
   const emojis = {
-      sad :sad,
+      Sad :sad,
   
-      angry :angry,
+      Anger :angry,
   
-      happy : happy,
-      surprised : surprised,
-      digust : disgust,
-      fear:surprised
+      Happy : happy,
+      Surprised : surprised,
+      Digust : disgust,
+      Fear:surprised
   }
   const options = {
     animationEnabled: true,
@@ -74,6 +74,7 @@ export default function TopicBlock(props){
     if (clicked){
         return    <Redirect to={"/topic/"+props.id} />
     }
+    let topic_name = props.topic.sort((a,b)=>b.value-a.value).slice(0, 10)
     return (
         <div className="Trend" onClick={() => setClicked(true)}>
       <div class="flex-container">
@@ -81,7 +82,7 @@ export default function TopicBlock(props){
           {" "}
           <Thermometer
             theme="dark"
-            value={props.statistics.sentiment}
+            value={17*(props.statistics.sentiment+3)}
             max="100"
             steps="3"
             format="%"
@@ -103,11 +104,12 @@ export default function TopicBlock(props){
             // height="300"
             // height="100"
           /> */}
-          <h2>{props.statistics.real}</h2>
+          <h2>{props.statistics.avg_fake}</h2>
         </div>
 
         <div class="flex-child">
-          <h2>{props.topic.map((t)=>t.text + ' ')}</h2>
+          
+          <h2>{topic_name.map((t)=>t.text + ' ')}</h2>
           <div style={{ height: 100, width: 100 }}>
             <ReactWordcloud words={props.topic} />
           </div>

@@ -88,7 +88,8 @@ function TrendBlock(props) {
           {" "}
           <Thermometer
             theme="dark"
-            value={17*(3+props.statistics.avgSentiment)}
+            value={(17*(3+props.statistics.sentiment)).toFixed()
+            }
             max="100"
             steps="3"
             format="%"
@@ -101,7 +102,7 @@ function TrendBlock(props) {
         <div class="flex-child green">
           <Thermometer
             theme="dark"
-            value={props.statistics.avgFakiness}
+            value={props.statistics.avg_fake}
             max="100"
             steps="3"
             format="%"

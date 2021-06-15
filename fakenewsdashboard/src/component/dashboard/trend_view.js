@@ -10,7 +10,7 @@ export default function TrendView(props){
         axios
           .get("/api/getTopics", {params: {trend:props.match.params.trend}})
           .then((res) => {
-            setTopics( res.data.topics);
+            setTopics( res.data);
         
           })
           .catch(() => {
@@ -24,7 +24,7 @@ export default function TrendView(props){
       const topicsView = topics.map((topic) =><TopicBlock id={topic.id} topic={topic.topic} statistics={topic.statistics} />)
 
       return(
-          <div className="Trend">
+          <div className="trends">
               {topicsView}
           </div>
       )

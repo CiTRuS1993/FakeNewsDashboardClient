@@ -3,22 +3,22 @@ import axios from "axios";
 import CanvasJSReact from '../../utils/canvasjs/canvasjs.react';
 // var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
-const stubclaims = [
-    { y: 1, label: "1.6.2021" },
-    { y: 1, label: "2.6.2021" },
-    { y: 3, label: "3.6.2021" },
-    { y: 2, label: "4.6.2021" },
-    { y: -1, label: "5.6.2021" },
-    { y: 1, label: "6.6.2021" },
-    { y: 1, label: "7.6.2021" },
-    { y: 0, label: "8.6.2021" },
-    { y: -3, label: "9.6.2021" },
-    { y: 1, label: "10.6.2021"},
-    { y: -2, label: "11.6.2021"},
-    { y: 1, label: "12.6.2021"},
-    { y: 1, label: "13.6.2021"}
+// const stubclaims = [
+//     { y: 1, label: "1.6.2021" },
+//     { y: 1, label: "2.6.2021" },
+//     { y: 3, label: "3.6.2021" },
+//     { y: 2, label: "4.6.2021" },
+//     { y: -1, label: "5.6.2021" },
+//     { y: 1, label: "6.6.2021" },
+//     { y: 1, label: "7.6.2021" },
+//     { y: 0, label: "8.6.2021" },
+//     { y: -3, label: "9.6.2021" },
+//     { y: 1, label: "10.6.2021"},
+//     { y: -2, label: "11.6.2021"},
+//     { y: 1, label: "12.6.2021"},
+//     { y: 1, label: "13.6.2021"}
 
-]
+// ]
 const stubtrending = [
     { y: 3, label: "1.6.2021" },
     { y: 1, label: "2.6.2021" },
@@ -55,7 +55,7 @@ const stubtopics = [
 
 function Sentiment(){
     const [topics,setTopics] = useState([])
-    const [claims,setClaims] = useState([])
+    // const [claims,setClaims] = useState([])
     const [trends,setTrends] = useState([])
 
 
@@ -93,12 +93,13 @@ function Sentiment(){
             showInLegend: true,
             dataPoints: trends
         },
-        {
-            type: "spline",
-            name: "claims",
-            showInLegend: true,
-            dataPoints: claims
-        }],
+        // {
+        //     type: "spline",
+        //     name: "claims",
+        //     showInLegend: true,
+        //     dataPoints: claims
+        // }
+    ],
         // width: "90vh",
         // height: "20vh"
     }
@@ -112,13 +113,13 @@ function Sentiment(){
             let trends = res.data.trends.map((sent)=> {return {y: sent.sentiment, label: sent.date}})
 
             setTopics(topics)
-            setClaims(claims)
+            // setClaims(claims)
             setTrends(trends)
         
           })
           .catch(() => {
             setTopics(stubtopics)
-            setClaims(stubclaims)
+            // setClaims(stubclaims)
             setTrends(stubtrending)
           });
       }
@@ -128,7 +129,7 @@ function Sentiment(){
 
       return(
 
-        <div className="sentiment">
+        <div className="sentiment"> 
         <CanvasJSChart options = {options} 
             /* onRef={ref => this.chart = ref} */
         />

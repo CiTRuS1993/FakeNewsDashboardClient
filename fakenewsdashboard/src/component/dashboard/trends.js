@@ -77,7 +77,7 @@ function Trends() {
         
           })
           .catch(() => {
-            setTrends({trend:[],words:[],statistics:[]});
+            setTrends({trend:stubtrending,words:stubwords,statistics:stubstat});
             
           });
       }
